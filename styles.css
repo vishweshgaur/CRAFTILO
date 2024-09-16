@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5dc; /* Beige */
+    color:blue#4b3621; /* Brown */
+}
+
+header {
+    background-color:blue#d2b48c; /* Peach */
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color:yellow#434b21;
+    font-weight: bold;
+}
+
+.hero-slider {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.hero-slider .slide {
+    display: none;
+}
+
+.hero-slider .slide img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-slider .slide.active {
+    display: block;
+}
+
+.slide-link {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #4b3621;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #d2b48c;
+    padding: 20px;
+    text-align: center;
+    color: #4b3621;
+}
+body {
+    font-family: 'Playfair Display', serif; /* Elegant serif font */
+    background-color: #f5f5dc; /* Light beige background */
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.logo h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(135deg, #d2691e, #f5deb3); /* Peach to Beige gradient */
+    background-clip: text;
+    -webkit-background-clip: text;
+    position: relative;
+}
+
+.lavish {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 5px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    color: black; /* Changed color to black */
+    display: inline-block;
+    animation: shimmer 2.5s infinite;
+}
+
+.ceramics {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    color: black; /* Changed color to black */
+    display: inline-block;
+}
+
+@keyframes shimmer {
+    0% {
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        text-shadow: 2px 4px 10px rgba(255, 215, 0, 0.8);
+    }
+    100% {
+        text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5dc; /* Beige */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.logo h1 {
+    font-size: 3.5em;
+    color: black;
+    letter-spacing: 3px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+}
+

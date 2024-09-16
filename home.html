@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - CRAFTILO</title>
+    <link rel="stylesheet" href="styles3.css">
+</head>
+<body>
+
+ <!-- Inquiry Form Section -->
+<section id="inquiry">
+    <h2>Get In Touch</h2>
+    <p>Have any questions? Feel free to ask us through this form.</p>
+    
+    <form id="inquiryForm" action="save_inquiry.php" method="POST">
+        <div class="form-group">
+            <label for="name">Your Name *</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="contact">Contact Number *</label>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="location">Your Location *</label>
+            <input type="text" id="location" name="location" placeholder="Enter your location" required>
+        </div>
+
+        <div class="form-group">
+            <label for="comments">Your Message *</label>
+            <textarea id="comments" name="comments" placeholder="Ask your questions or leave a comment" required></textarea>
+        </div>
+
+        <button type="submit">Submit Inquiry</button>
+    </form>
+</section>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Lavish Ceramics</h1>
+            <p>Experience elegance in every corner.</p>
+            <a href="products.html" class="btn">Explore Our Collection</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <img src="Screenshot 2024-09-06 112619 - Copy.png" alt="Durability">
+            <h3>Durability</h3>
+            <p>Our tiles are made to last with premium quality and strength.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Screenshot 2024-09-06 112909.png" alt="Design">
+            <h3>Design</h3>
+            <p>Innovative designs that bring elegance and warmth to your spaces.</p>
+        </div>
+        <div class="feature-card">
+            <img src="Screenshot 2024-09-06 112655.png" alt="Luxury">
+            <h3>Luxury</h3>
+            <p>Immerse yourself in the luxury of handcrafted ceramic tiles.</p>
+        </div>
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
