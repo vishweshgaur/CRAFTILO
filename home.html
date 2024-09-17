@@ -13,7 +13,7 @@
     <h2>Get In Touch</h2>
     <p>Have any questions? Feel free to ask us through this form.</p>
     
-    <form id="inquiryForm" action="save_inquiry.php" method="POST">
+    <form id="inquiryForm" action="/inquiry/submit" method="POST">
         <div class="form-group">
             <label for="name">Your Name *</label>
             <input type="text" id="name" name="name" placeholder="Enter your name" required>
@@ -42,6 +42,30 @@
         <button type="submit">Submit Inquiry</button>
     </form>
 </section>
+<script>
+    document.getElementById('inquiryForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevents the form from reloading the page
+
+        const formData = {
+            name: document.getElementById('name').value,
+            contact: document.getElementById('contact').value,
+            email: document.getElementById('email').value,
+            location: document.getElementById('location').value,
+            comments: document.getElementById('comments').value
+        };
+
+        fetch('http://localhost:8080/inquiry/submit', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => response.text())
+        .then(data => alert(data))
+        .catch(error => console.error('Error:', error));
+    });
+</script>
 
 
     <!-- Hero Section -->

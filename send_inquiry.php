@@ -16,7 +16,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     // Send email
     if (mail($to, $subject, $body, $headers)) {
         echo "Inquiry sent successfully!";
-    } else {
+    } 
+    else {
         echo "Failed to send the inquiry. Please try again.";
     }
 }

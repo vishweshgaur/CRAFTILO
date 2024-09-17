@@ -1,20 +1,30 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Montserrat', sans-serif; /* Clean, modern font */
+    background-color: #f4f4f9; /* Light grey for a more sophisticated look */
     margin: 0;
     padding: 0;
-    background-color: #f5f5dc; /* Beige */
-    color:blue#4b3621; /* Brown */
+    color: #333; /* Dark grey for better readability */
 }
 
 header {
-    background-color:blue#d2b48c; /* Peach */
-    padding: 15px 0;
+    background-color: #333; /* Dark background for a clean contrast */
+    padding: 20px 0;
+    text-align: center;
+}
+/* Header Styles */
+header {
+    background-color: #333; /* Dark background */
+    padding: 20px 0;
+    text-align: center;
 }
 
 nav ul {
-    list-style-type: none;
+    list-style: none;
     display: flex;
     justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 nav ul li {
@@ -23,27 +33,55 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color:yellow#434b21;
-    font-weight: bold;
+    color: #fff; /* White text */
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 0; /* Vertical padding for spacing */
+    position: relative;
+    transition: color 0.3s ease; /* Smooth transition for color */
 }
 
+nav ul li a:hover {
+    color: #f5deb3; /* Change text color on hover */
+}
+
+/* Underline effect on hover */
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: #f5deb3; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation for underline */
+}
+
+nav ul li a:hover:after {
+    width: 100%; /* Extend underline to full width on hover */
+}
+
+/* Hero Slider */
 .hero-slider {
     position: relative;
     max-width: 100%;
     overflow: hidden;
+    margin: 40px 0;
 }
 
 .hero-slider .slide {
     display: none;
+    animation: fade 1.5s ease-in-out;
+}
+
+.hero-slider .slide.active {
+    display: block;
 }
 
 .hero-slider .slide img {
     width: 100%;
     height: auto;
-}
-
-.hero-slider .slide.active {
-    display: block;
+    border-radius: 10px;
 }
 
 .slide-link {
@@ -51,46 +89,48 @@ nav ul li a {
     bottom: 20px;
     right: 20px;
     padding: 10px 20px;
-    background-color: #4b3621;
-    color: white;
+    background-color: #f5deb3; /* Light beige for contrast */
+    color: #333; /* Dark text */
+    font-weight: bold;
     text-decoration: none;
     border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
 }
 
+.slide-link:hover {
+    background-color: #d2691e; /* Darker peach for hover */
+}
+
+/* Footer */
 footer {
-    background-color: #d2b48c;
-    padding: 20px;
+    background-color: #333; /* Dark background */
+    color: #f5deb3; /* Light beige text */
+    padding: 20px 0;
     text-align: center;
-    color: #4b3621;
-}
-body {
-    font-family: 'Playfair Display', serif; /* Elegant serif font */
-    background-color: #f5f5dc; /* Light beige background */
-    margin: 0;
-    padding: 0;
+    font-size: 0.9em;
 }
 
-header {
-    text-align: center;
-    margin: 50px 0;
+/* Animations */
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
+/* Header Logo */
 .logo h1 {
     font-size: 4em;
-    font-weight: bold;
-    text-transform: uppercase;
     color: transparent;
-    background: linear-gradient(135deg, #d2691e, #f5deb3); /* Peach to Beige gradient */
+    background: linear-gradient(135deg, #d2691e, #f5deb3);
     background-clip: text;
     -webkit-background-clip: text;
-    position: relative;
 }
 
 .lavish {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 5px;
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
-    color: black; /* Changed color to black */
+    color: black;
     display: inline-block;
     animation: shimmer 2.5s infinite;
 }
@@ -100,7 +140,7 @@ header {
     font-weight: 400;
     letter-spacing: 2px;
     text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-    color: black; /* Changed color to black */
+    color: black;
     display: inline-block;
 }
 
@@ -109,42 +149,9 @@ header {
         text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     }
     50% {
-        text-shadow: 2px 4px 10px rgba(255, 215, 0, 0.8);
+        text-shadow: 2px 4px 10px rgba(255, 215, 0, 0.8); /* Gold shimmer */
     }
     100% {
         text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     }
 }
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f5f5dc; /* Beige */
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.logo h1 {
-    font-size: 3.5em;
-    color: black;
-    letter-spacing: 3px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 1.2em;
-}
-
