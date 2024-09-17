@@ -155,3 +155,28 @@ footer {
         text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
     }
 }
+/* WhatsApp Icon Styles */
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp green */
+    color: white;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 30px;
+    text-align: center;
+    z-index: 1000; /* Make sure it's on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-link:hover {
+    background-color: #128c7e; /* Darker WhatsApp green on hover */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.whatsapp-link i {
+    color: white; /* Ensure the WhatsApp icon is white */
+}
+
