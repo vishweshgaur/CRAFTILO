@@ -1,71 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - CRAFTILO</title>
     <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="navbarStyle.css">
+    <script src="navbar.js"></script>
 </head>
+
 <body>
 
- <!-- Inquiry Form Section -->
-<section id="inquiry">
-    <h2>Get In Touch</h2>
-    <p>Have any questions? Feel free to ask us through this form.</p>
-    
-    <form id="inquiryForm" action="/inquiry/submit" method="POST">
-        <div class="form-group">
-            <label for="name">Your Name *</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-        </div>
-        
-        <div class="form-group">
-            <label for="contact">Contact Number *</label>
-            <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
-        </div>
+    <div id="navbar-placeholder"></div>
+    <!-- Inquiry Form Section -->
+    <section id="inquiry">
+        <h2>Get In Touch</h2>
+        <p>Have any questions? Feel free to ask us through this form.</p>
 
-        <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-        </div>
+        <form id="inquiryForm" action="/inquiry/submit" method="POST">
+            <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
 
-        <div class="form-group">
-            <label for="location">Your Location *</label>
-            <input type="text" id="location" name="location" placeholder="Enter your location" required>
-        </div>
+            <div class="form-group">
+                <label for="contact">Contact Number *</label>
+                <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+            </div>
 
-        <div class="form-group">
-            <label for="comments">Your Message *</label>
-            <textarea id="comments" name="comments" placeholder="Ask your questions or leave a comment" required></textarea>
-        </div>
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
 
-        <button type="submit">Submit Inquiry</button>
-    </form>
-</section>
-<script>
-    document.getElementById('inquiryForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the form from reloading the page
+            <div class="form-group">
+                <label for="location">Your Location *</label>
+                <input type="text" id="location" name="location" placeholder="Enter your location" required>
+            </div>
 
-        const formData = {
-            name: document.getElementById('name').value,
-            contact: document.getElementById('contact').value,
-            email: document.getElementById('email').value,
-            location: document.getElementById('location').value,
-            comments: document.getElementById('comments').value
-        };
+            <div class="form-group">
+                <label for="comments">Your Message *</label>
+                <textarea id="comments" name="comments" placeholder="Ask your questions or leave a comment"
+                    required></textarea>
+            </div>
 
-        fetch('http://localhost:8080/inquiry/submit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        })
-        .then(response => response.text())
-        .then(data => alert(data))
-        .catch(error => console.error('Error:', error));
-    });
-</script>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+    <script>
+        document.getElementById('inquiryForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevents the form from reloading the page
+
+            const formData = {
+                name: document.getElementById('name').value,
+                contact: document.getElementById('contact').value,
+                email: document.getElementById('email').value,
+                location: document.getElementById('location').value,
+                comments: document.getElementById('comments').value
+            };
+
+            fetch('http://localhost:8080/inquiry/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            })
+                .then(response => response.text())
+                .then(data => alert(data))
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
 
 
     <!-- Hero Section -->
@@ -98,4 +104,5 @@
 
     <script src="scripts.js"></script>
 </body>
+
 </html>

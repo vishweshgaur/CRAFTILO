@@ -1,0 +1,49 @@
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+/* Navbar Links with specific selector to ensure color change */
+.nav-links li a {
+    text-decoration: none;
+    color: black !important;  /* Ensure font color is black */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* Thin font */
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+    border-bottom: 2px solid yellow;
+}
+
+
+/* Underline effect on hover */
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px; /* Position the underline slightly below the text */
+    width: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: #f5deb3; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth animation for underline */
+}
+
+nav ul li a:hover:after {
+    width: 100%; /* Extend underline to full width on hover */
+}
+
+.content {
+    padding-top: 60px;
+     /* Prevent content from hiding behind fixed navbar */
+}
